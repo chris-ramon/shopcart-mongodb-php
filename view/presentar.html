@@ -1,0 +1,52 @@
+<div id="content">
+      <h2>Total Price</h2>
+  <div class="msg_success">
+  <p>Your order has been send succesfully !</p>
+  </div>
+  <br>
+  <table border="1">
+      <thead>
+          <tr>
+              <th>Total Price</th>
+
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+
+              <td><?php echo $orden->getPrice();?></td>
+          </tr>
+
+
+      </tbody>
+  </table>
+      <h2>Order Detail</h2>
+  <table border="1">
+      <thead>
+
+          <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>SubTotal</th>
+
+          </tr>
+      </thead>
+      <tbody>
+          <?php foreach($orden->getProductos() as $producto) { ?>
+          <tr>
+              <td><?php echo $producto['name'];?></td>
+              <td><?php echo $producto['description'];?></td>
+              <td><?php echo $producto['quantity'];?></td>
+              <td><?php echo $producto['price'];?></td>
+              <td><?php echo $producto['subTotal'];?></td>
+              
+          </tr>
+          <?php } ?>
+      </tbody>
+
+  </table>
+      <a href="ViewPHP.php?view=cerrar">Cerrar sesion</a>
+</div>
+
