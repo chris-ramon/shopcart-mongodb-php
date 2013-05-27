@@ -26,7 +26,8 @@ class Persistence {
         $grid = $db->getGridFS();
         $grid->remove();
 
-        $path = "/opt/lampp/htdocs/MongoShoppingCart/imagenes/";
+        $project_root = dirname(dirname(__FILE__));
+        $path = $project_root . DIRECTORY_SEPARATOR . "imagenes" . DIRECTORY_SEPARATOR;
 
            
             for($i=1;$i<7;$i++)
