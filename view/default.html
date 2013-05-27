@@ -13,7 +13,7 @@
             
               
               <h3><?php echo $producto->getName();?> - $ <?php echo number_format($producto->getPrice(),2);?> </h3>
-              <img src="<?php echo $producto->getImgPath(); ?>">
+              <img src="<?php echo $producto->getImgPath(); ?>" height="200">
               <p><?php echo $producto->getDescription();?></p>
 
               <a href="ViewPHP.php?view=imagen&id=<?php echo $producto->getId();?>" class='contentA'>See image detail</a> |
