@@ -26,6 +26,8 @@ class Product {
     }
     public function getAll()
     {
+        $path = "/imagenes" . DIRECTORY_SEPARATOR;
+
         $instance=Persistence::getInstance();
         $result=$instance->getAll('products');
         $productos=array();
@@ -35,7 +37,7 @@ class Product {
             $name=$item['name'];
             $description=$item['description'];
             $price=$item['price'];
-            $imgPath=$item['img'];
+            $imgPath=$path . $item['img'];
             $producto=new Product($id, $name, $description, $price, $imgPath);
             $productos[]=$producto;
             $productos = array_reverse($productos);
