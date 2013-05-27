@@ -9,6 +9,10 @@ using <a href="http://www.mongodb.org/">mongoDB</a> and <a href="http://www.php.
 <h2>Running!</h2>
 
 <p>To get it going open <strong>Index.php</strong></p>
+<p>Run the following command to insert test data:</p>
+<code>
+mongo localhost:27017/shoppingCart test_data.js
+</code>
 
 <strong>Tested using:</strong>
 <p><a href="http://www.mongodb.org/">mongoDB</a> &raquo; 1.2.2</p>
