@@ -32,4 +32,13 @@ class User{
         }
         return $users;    
     }
+
+    function createUser($username, $password, $role) {
+        $i = Persistence::getInstance();
+        $collection = 'users';
+        $document = array('name'=>$username,
+            'password'=>$password,
+            'type'=>$role);
+        return $i->insertDocument($document,$collection);
+    }
 }

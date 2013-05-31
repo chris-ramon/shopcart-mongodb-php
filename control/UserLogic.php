@@ -12,4 +12,9 @@ class UserLogic{
         }
         return false;
     }
+
+    function create($username ,$pwd, $role){
+        $usr = new User();
+        return $usr->createUser($username ,$pwd, $role);
+    }
 }

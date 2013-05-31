@@ -15,7 +15,6 @@ class ViewPHP {
         $miLogic=new Controlador();
         
         $view=isset($_GET['view'])?($_GET['view']):'default';
-        
         switch($view)
         {
             case 'default':
@@ -72,6 +71,26 @@ class ViewPHP {
                 }
                 break;
             case 'register':
+                echo $username = $_POST['username'];
+                echo $pwd = $_POST['pwd'];
+                echo $role = 'customer';
+                $userLogic = new UserLogic();
+                $created = $userLogic->create($username, $pwd, $role);
+                $rs = $userLogic->auth($username, $pwd);
+                echo var_dump($rs);
+//                $username = $_POST['username'];
+//                $pwd = $_POST['pwd'];
+//                $role = 'customer';
+//                $userLogic = new UserLogic();
+//                $created = $userLogic->create($username, $pwd, $role);
+//                echo $created;
+//                if ($created) {
+//                    $rs = $userLogic->auth($username, $pwd);
+//                    header('location:ViewPHP.php');
+//                } else {
+//                    // TODO: handle errors
+//                    header('location:ViewPHP.php');
+//                }
                 break;
             case 'addProduct':
                 if(isset($_POST['name'])){

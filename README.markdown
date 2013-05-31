@@ -1,6 +1,6 @@
 <h1>Shopping cart</h1>
 <p><img src="http://javierav.com/images/logo-mongodb-onwhite.png" height="100"/> <strong> + </strong> 
-<img src="http://drupal.org/files/project-images/php.png" height="100" /></p>
+<img src="http://www.planet-source-code.com/vb/2010Redesign/images/LangugeHomePages/PHP.png" height="100" /></p>
 <h2>About:</h2>
 <p>Small shopping cart app for university project
 using <a href="http://www.mongodb.org/">mongoDB</a> and <a href="http://www.php.net/">php</a> as backend.</p>
